@@ -1,4 +1,4 @@
-package com.api.bluetrip.controllers.dtos;
+package com.api.bluetrip.controllers.dtos.error;
 
 import java.time.LocalDateTime;
 
