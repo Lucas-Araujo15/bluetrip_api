@@ -18,9 +18,9 @@ public class PaymentController {
         this.paymentService = paymentService;
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<DetailedPaymentDTO> update(@RequestBody @Valid PaymentUpdateDTO paymentUpdateDTO, @PathVariable("id") Long id) {
-        DetailedPaymentDTO detailedPaymentDTO = paymentService.update(id, paymentUpdateDTO);
-        return ResponseEntity.ok(detailedPaymentDTO);
-    }
+//    @PutMapping("/{id}")
+//    public ResponseEntity<DetailedPaymentDTO> update(@RequestBody @Valid PaymentUpdateDTO paymentUpdateDTO, @PathVariable("id") Long id) {
+//        DetailedPaymentDTO detailedPaymentDTO = paymentService.update(id, paymentUpdateDTO);
+//        return ResponseEntity.ok(detailedPaymentDTO);
+//    }
 }

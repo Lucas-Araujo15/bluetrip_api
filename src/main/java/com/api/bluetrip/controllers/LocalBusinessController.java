@@ -32,7 +32,7 @@ public class LocalBusinessController {
 
     @PostMapping
     public ResponseEntity<EntityModel<LocalBusinessListDTO>> create(@RequestBody @Valid LocalBusinessRegisterDTO localBusinessRegisterDTO) {
-        LocalBusinessListDTO localBusinessListDTO = localBusinessRegisterDTO.create(localBusinessRegisterDTO);
+        LocalBusinessListDTO localBusinessListDTO = localBusinessService.create(localBusinessRegisterDTO);
 
         return ResponseEntity
                 .created(linkTo(methodOn(LocalBusinessController.class).findById(localBusinessListDTO.id())).toUri())

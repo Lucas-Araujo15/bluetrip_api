@@ -1,5 +1,7 @@
 package com.api.bluetrip.models;
 
+import com.api.bluetrip.controllers.dtos.localbusiness.LocalBusinessRegisterDTO;
+import com.api.bluetrip.controllers.dtos.localbusiness.LocalBusinessUpdateDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalTime;
+import java.util.List;
 
 @Table(name = "T_BT_LOCAL_BUSINESS")
 @AllArgsConstructor
@@ -46,4 +49,63 @@ public class LocalBusiness {
 
     @Column(name = "ds_business_category", nullable = false)
     private String businessCategory;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_user")
+    private User user;
+
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_address")
+    private Address address;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_local_business")
+    private List<Service> serviceList;
+
+    public LocalBusiness(LocalBusinessRegisterDTO localBusinessRegisterDTO) {
+        this.tradeName = localBusinessRegisterDTO.tradeName();
+        this.businessCategory = localBusinessRegisterDTO.businessCategory();
+        this.closeHour = localBusinessRegisterDTO.closeHour();
+        this.description = localBusinessRegisterDTO.description();
+        this.openHour = localBusinessRegisterDTO.openHour();
+        this.phone = localBusinessRegisterDTO.phone();
+        this.urlImage = localBusinessRegisterDTO.urlImage();
+        this.urlWebsite = localBusinessRegisterDTO.urlWebsite();
+        this.user = new User(localBusinessRegisterDTO.user());
+        this.address = new Address(localBusinessRegisterDTO.address());
+    }
+
+    public void updateInformation(LocalBusinessUpdateDTO localBusinessUpdateDTO) {
+        if (localBusinessUpdateDTO.tradeName() != null) {
+            this.tradeName = localBusinessUpdateDTO.tradeName();
+        }
+
+        if (localBusinessUpdateDTO.description() != null) {
+            this.description = localBusinessUpdateDTO.description();
+        }
+
+        if (localBusinessUpdateDTO.urlWebsite() != null) {
+            this.urlWebsite = localBusinessUpdateDTO.urlWebsite();
+        }
+
+        if (localBusinessUpdateDTO.urlImage() != null) {
+            this.urlImage = localBusinessUpdateDTO.urlImage();
+        }
+
+        if (localBusinessUpdateDTO.openHour() != null) {
+            this.openHour = localBusinessUpdateDTO.openHour();
+        }
+
+        if (localBusinessUpdateDTO.closeHour() != null) {
+            this.closeHour = localBusinessUpdateDTO.closeHour();
+        }
+
+        if (localBusinessUpdateDTO.phone() != null) {
+            this.phone = localBusinessUpdateDTO.phone();
+        }
+
+        if (localBusinessUpdateDTO.businessCategory() != null) {
+            this.businessCategory = localBusinessUpdateDTO.businessCategory();
+        }
+    }
 }

@@ -1,5 +1,7 @@
 package com.api.bluetrip.models;
 
+import com.api.bluetrip.controllers.dtos.address.AddressRegisterDTO;
+import com.api.bluetrip.controllers.dtos.address.AddressUpdateDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,4 +40,44 @@ public class Address {
 
     @Column(name = "ds_complement", nullable = true)
     private String complement;
+
+    public Address(AddressRegisterDTO addressRegisterDTO) {
+        this.street = addressRegisterDTO.street();
+        this.city = addressRegisterDTO.city();
+        this.zipCode = addressRegisterDTO.zipCode();
+        this.state = addressRegisterDTO.state();
+        this.neighborhood = addressRegisterDTO.neighborhood();
+        this.numberBuilding = addressRegisterDTO.numberBuilding();
+        this.complement = addressRegisterDTO.complement();
+    }
+
+    public void updateInformation(AddressUpdateDTO addressUpdateDTO) {
+        if (addressUpdateDTO.street() != null) {
+            this.street = addressUpdateDTO.street();
+        }
+
+        if (addressUpdateDTO.city() != null) {
+            this.city = addressUpdateDTO.city();
+        }
+
+        if (addressUpdateDTO.zipCode() != null) {
+            this.zipCode = addressUpdateDTO.zipCode();
+        }
+
+        if (addressUpdateDTO.state() != null) {
+            this.state = addressUpdateDTO.state();
+        }
+
+        if (addressUpdateDTO.neighborhood() != null) {
+            this.neighborhood = addressUpdateDTO.neighborhood();
+        }
+
+        if (addressUpdateDTO.numberBuilding() != null) {
+            this.numberBuilding = addressUpdateDTO.numberBuilding();
+        }
+
+        if (addressUpdateDTO.complement() != null) {
+            this.complement = addressUpdateDTO.complement();
+        }
+    }
 }

@@ -1,5 +1,6 @@
 package com.api.bluetrip.models;
 
+import com.api.bluetrip.controllers.dtos.UserRegisterDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Table(name = "T_BT_USER")
 @AllArgsConstructor
@@ -31,4 +33,10 @@ public class User {
 
     @Column(name = "ds_user_type", nullable = false)
     private String userType;
+
+    public User(UserRegisterDTO userRegisterDTO) {
+        this.email = userRegisterDTO.email();
+        this.userType = userRegisterDTO.userType();
+        this.password = userRegisterDTO.password();
+    }
 }

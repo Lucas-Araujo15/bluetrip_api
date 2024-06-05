@@ -9,6 +9,9 @@ public record UserRegisterDTO(
         String email,
 
         @NotBlank
-        String password
+        String password,
+
+        @NotBlank
+        String userType
 ) {
 }

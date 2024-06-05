@@ -1,6 +1,7 @@
 package com.api.bluetrip.repositories;
 
+import com.api.bluetrip.models.Administrator;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface AdministratorRepository extends JpaRepository<AdministratorRepository, Long> {
+public interface AdministratorRepository extends JpaRepository<Administrator, Long> {
 }
