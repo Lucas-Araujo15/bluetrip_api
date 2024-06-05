@@ -1,5 +1,7 @@
 package com.api.bluetrip.controllers.dtos.tourist;
 
+import com.api.bluetrip.controllers.dtos.user.UserUpdateDTO;
+
 import java.time.LocalDate;
 
 public record TouristUpdateDTO(
@@ -13,6 +15,8 @@ public record TouristUpdateDTO(
 
         String gender,
 
-        String language
+        String language,
+
+        UserUpdateDTO user
 ) {
 }

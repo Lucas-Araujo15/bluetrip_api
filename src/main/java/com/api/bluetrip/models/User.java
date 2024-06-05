@@ -1,6 +1,7 @@
 package com.api.bluetrip.models;
 
 import com.api.bluetrip.controllers.dtos.UserRegisterDTO;
+import com.api.bluetrip.controllers.dtos.user.UserUpdateDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -38,5 +39,15 @@ public class User {
         this.email = userRegisterDTO.email();
         this.userType = userRegisterDTO.userType();
         this.password = userRegisterDTO.password();
+    }
+
+    public void updateInformation(UserUpdateDTO userUpdateDTO) {
+        if (userUpdateDTO.email() != null) {
+            this.email = userUpdateDTO.email();
+        }
+
+        if (userUpdateDTO.password() != null) {
+            this.password = userUpdateDTO.password();
+        }
     }
 }

@@ -1,8 +1,7 @@
 package com.api.bluetrip.controllers.dtos.localbusiness;
 
 import com.api.bluetrip.controllers.dtos.address.AddressUpdateDTO;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+import com.api.bluetrip.controllers.dtos.user.UserUpdateDTO;
 
 import java.time.LocalTime;
 
@@ -23,7 +22,9 @@ public record LocalBusinessUpdateDTO(
 
         String businessCategory,
 
-        AddressUpdateDTO address
+        AddressUpdateDTO address,
+
+        UserUpdateDTO user
 ) {
 
 }

@@ -30,48 +30,48 @@ public class EventController {
         this.eventService = eventService;
     }
 
-//    @PostMapping
-//    public ResponseEntity<EntityModel<EventListDTO>> create(@RequestBody @Valid EventRegisterDTO eventRegisterDTO) {
-//        EventListDTO eventListDTO = eventService.create(eventRegisterDTO);
-//
-//        return ResponseEntity
-//                .created(linkTo(methodOn(EventController.class).findById(eventListDTO.id())).toUri())
-//                .body(EntityModel.of(eventListDTO,
-//                        linkTo(methodOn(EventController.class).findById(eventListDTO.id())).withSelfRel(),
-//                        linkTo(methodOn(EventController.class).find(null)).withRel("events")));
-//    }
-//
-//    @GetMapping
-//    public ResponseEntity<Page<EventListDTO>> find(@PageableDefault(size = 10, page = 0) Pageable pagination) {
-//        Page<EventListDTO> page = eventService.find(pagination);
-//        return ResponseEntity.ok(page);
-//    }
-//
-//    @GetMapping("/{id}")
-//    public ResponseEntity<DetailedEventDTO> findById(@PathVariable("id") Long id) {
-//        DetailedEventDTO detailedEventDTO = eventService.findById(id);
-//        return ResponseEntity.ok(detailedEventDTO);
-//    }
-//
-//    @PutMapping("/{id}")
-//    public ResponseEntity<DetailedEventDTO> update(@RequestBody @Valid EventUpdateDTO eventUpdateDTO, @PathVariable("id") Long id) {
-//        DetailedEventDTO detailedEventDTO = EventService.update(id, eventUpdateDTO);
-//        return ResponseEntity.ok(detailedEventDTO);
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public ResponseEntity<?> delete(@PathVariable("id") Long id) {
-//        eventService.delete(id);
-//        return ResponseEntity.noContent().build();
-//    }
-//
-//    @GetMapping("/hateoas")
-//    public CollectionModel<EntityModel<EventListDTO>> findAllEventssHateoas(@PageableDefault(size = 10, page = 0) Pageable pagination) {
-//        List<EntityModel<EventListDTO>> events = eventService.find(pagination).stream()
-//                .map(event -> EntityModel.of(event,
-//                        linkTo(methodOn(EventController.class).findById(event.id())).withSelfRel()))
-//                .toList();
-//
-//        return CollectionModel.of(events, linkTo(methodOn(EventController.class).find(null)).withSelfRel());
-//    }
+    @PostMapping
+    public ResponseEntity<EntityModel<EventListDTO>> create(@RequestBody @Valid EventRegisterDTO eventRegisterDTO) {
+        EventListDTO eventListDTO = eventService.create(eventRegisterDTO);
+
+        return ResponseEntity
+                .created(linkTo(methodOn(EventController.class).findById(eventListDTO.id())).toUri())
+                .body(EntityModel.of(eventListDTO,
+                        linkTo(methodOn(EventController.class).findById(eventListDTO.id())).withSelfRel(),
+                        linkTo(methodOn(EventController.class).find(null)).withRel("events")));
+    }
+
+    @GetMapping
+    public ResponseEntity<Page<EventListDTO>> find(@PageableDefault(size = 10, page = 0) Pageable pagination) {
+        Page<EventListDTO> page = eventService.find(pagination);
+        return ResponseEntity.ok(page);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<DetailedEventDTO> findById(@PathVariable("id") Long id) {
+        DetailedEventDTO detailedEventDTO = eventService.findById(id);
+        return ResponseEntity.ok(detailedEventDTO);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<DetailedEventDTO> update(@RequestBody @Valid EventUpdateDTO eventUpdateDTO, @PathVariable("id") Long id) {
+        DetailedEventDTO detailedEventDTO = eventService.update(id, eventUpdateDTO);
+        return ResponseEntity.ok(detailedEventDTO);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Long id) {
+        eventService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/hateoas")
+    public CollectionModel<EntityModel<EventListDTO>> findAllEventssHateoas(@PageableDefault(size = 10, page = 0) Pageable pagination) {
+        List<EntityModel<EventListDTO>> events = eventService.find(pagination).stream()
+                .map(event -> EntityModel.of(event,
+                        linkTo(methodOn(EventController.class).findById(event.id())).withSelfRel()))
+                .toList();
+
+        return CollectionModel.of(events, linkTo(methodOn(EventController.class).find(null)).withSelfRel());
+    }
 }

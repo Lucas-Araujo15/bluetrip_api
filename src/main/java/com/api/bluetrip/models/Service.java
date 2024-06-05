@@ -1,10 +1,14 @@
 package com.api.bluetrip.models;
 
+import com.api.bluetrip.controllers.dtos.service.ServiceRegisterDTO;
+import com.api.bluetrip.controllers.dtos.service.ServiceUpdateDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Table(name = "T_BT_SERVICE")
 @AllArgsConstructor
@@ -29,4 +33,37 @@ public class Service {
 
     @Column(name = "ds_category", nullable = false)
     private String category;
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_local_business")
+    private LocalBusiness localBusiness;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_service")
+    private List<ServiceUsage> serviceUsageList;
+
+    public Service(ServiceRegisterDTO serviceRegisterDTO) {
+        this.name = serviceRegisterDTO.name();
+        this.description = serviceRegisterDTO.description();
+        this.price = serviceRegisterDTO.price();
+        this.category = serviceRegisterDTO.category();
+    }
+
+    public void updateInformation(ServiceUpdateDTO serviceUpdateDTO) {
+        if (serviceUpdateDTO.name() != null) {
+            this.name = serviceUpdateDTO.name();
+        }
+
+        if (serviceUpdateDTO.description() != null) {
+            this.description = serviceUpdateDTO.description();
+        }
+
+        if (serviceUpdateDTO.price() != 0.0f) {
+            this.price = serviceUpdateDTO.price();
+        }
+
+        if (serviceUpdateDTO.category() != null) {
+            this.category = serviceUpdateDTO.category();
+        }
+    }
 }

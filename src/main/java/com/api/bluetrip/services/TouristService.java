@@ -15,9 +15,12 @@ import org.springframework.stereotype.Service;
 public class TouristService {
     private final TouristRepository touristRepository;
 
+    private final UserService userService;
+
     @Autowired
-    public TouristService(TouristRepository touristRepository) {
+    public TouristService(TouristRepository touristRepository, UserService userService) {
         this.touristRepository = touristRepository;
+        this.userService = userService;
     }
 
     public TouristListDTO create(TouristRegisterDTO touristRegisterDTO) {
@@ -36,6 +39,8 @@ public class TouristService {
         Tourist tourist = touristRepository.getReferenceById(id);
 
         tourist.updateInformation(touristUpdateDTO);
+
+        userService.update(tourist.getUser().getId(), touristUpdateDTO.user());
 
         touristRepository.save(tourist);
 

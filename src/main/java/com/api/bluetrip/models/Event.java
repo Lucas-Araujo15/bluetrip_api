@@ -1,5 +1,7 @@
 package com.api.bluetrip.models;
 
+import com.api.bluetrip.controllers.dtos.event.EventRegisterDTO;
+import com.api.bluetrip.controllers.dtos.event.EventUpdateDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Table(name = "T_BT_EVENT")
 @AllArgsConstructor
@@ -37,4 +40,43 @@ public class Event {
 
     @Column(name = "dt_end", nullable = true)
     private LocalDateTime dateEnd;
+
+    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_tourist_spot")
+    private TouristSpot touristSpot;
+
+    public Event(EventRegisterDTO eventRegisterDTO) {
+        this.name = eventRegisterDTO.name();
+        this.description = eventRegisterDTO.description();
+        this.price = eventRegisterDTO.price();
+        this.urlImage = eventRegisterDTO.urlImage();
+        this.dateStart = eventRegisterDTO.dateStart();
+        this.dateEnd = eventRegisterDTO.dateEnd();
+    }
+
+    public void updateInformation(EventUpdateDTO eventUpdateDTO) {
+        if (eventUpdateDTO.name() != null) {
+            this.name = eventUpdateDTO.name();
+        }
+
+        if (eventUpdateDTO.description() != null) {
+            this.description = eventUpdateDTO.description();
+        }
+
+        if (eventUpdateDTO.price() != 0.0f) {
+            this.price = eventUpdateDTO.price();
+        }
+
+        if (eventUpdateDTO.urlImage() != null) {
+            this.urlImage = eventUpdateDTO.urlImage();
+        }
+
+        if (eventUpdateDTO.dateStart() != null) {
+            this.dateStart = eventUpdateDTO.dateStart();
+        }
+
+        if (eventUpdateDTO.dateEnd() != null) {
+            this.dateEnd = eventUpdateDTO.dateEnd();
+        }
+    }
 }

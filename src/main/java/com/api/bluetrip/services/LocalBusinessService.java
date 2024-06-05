@@ -20,10 +20,13 @@ public class LocalBusinessService {
 
     private final AddressService addressService;
 
+    private final UserService userService;
+
     @Autowired
-    public LocalBusinessService(LocalBusinessRepository localBusinessRepository, AddressService addressService) {
+    public LocalBusinessService(LocalBusinessRepository localBusinessRepository, AddressService addressService, UserService userService) {
         this.localBusinessRepository = localBusinessRepository;
         this.addressService = addressService;
+        this.userService = userService;
     }
 
     public LocalBusinessListDTO create(LocalBusinessRegisterDTO localBusinessRegisterDTO) {
@@ -48,6 +51,8 @@ public class LocalBusinessService {
         localBusiness.updateInformation(localBusinessUpdateDTO);
 
         addressService.update(localBusiness.getAddress().getId(), localBusinessUpdateDTO.address());
+
+        userService.update(localBusiness.getUser().getId(), localBusinessUpdateDTO.user());
 
         localBusinessRepository.save(localBusiness);
 
