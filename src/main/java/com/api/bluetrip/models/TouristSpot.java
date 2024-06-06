@@ -18,7 +18,8 @@ import java.util.List;
 @Entity(name = "tourist_spot")
 public class TouristSpot {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqTouristSpot")
+    @SequenceGenerator(name = "seqTouristSpot", sequenceName = "SEQ_T_BT_TOURIST_SPOT", allocationSize = 1)
     @Column(name = "id_tourist_spot", nullable = false)
     private Long id;
 
@@ -44,11 +45,11 @@ public class TouristSpot {
     private String category;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_address")
+    @JoinColumn(name = "t_bt_address_id_address")
     private Address address;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_tourist_spot")
+    @JoinColumn(name = "t_bt_tourist_spot_id_tourist_spot")
     private List<Event> eventList;
 
     public TouristSpot(TouristSpotRegisterDTO touristSpotRegisterDTO) {

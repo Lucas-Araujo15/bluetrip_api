@@ -14,6 +14,9 @@ public record ServiceRegisterDTO(
         float price,
 
         @NotBlank
-        String category
+        String category,
+
+        @NotNull
+        Long localBusinessId
 ) {
 }

@@ -1,5 +1,7 @@
 package com.api.bluetrip.models;
 
+import com.api.bluetrip.controllers.dtos.payment.PaymentRegisterDTO;
+import com.api.bluetrip.controllers.dtos.payment.PaymentUpdateDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,7 +18,8 @@ import java.time.LocalDateTime;
 @Entity(name = "payment")
 public class Payment {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqPayment")
+    @SequenceGenerator(name = "seqPayment", sequenceName = "SEQ_T_BT_PAYMENT", allocationSize = 1)
     @Column(name = "id_payment", nullable = false)
     private Long id;
 
@@ -31,4 +34,20 @@ public class Payment {
 
     @Column(name = "dt_payment", nullable = true)
     private LocalDateTime datePayment;
+
+    public Payment(PaymentRegisterDTO paymentRegisterDTO) {
+        this.paymentMethod = paymentRegisterDTO.paymentMethod();
+        this.totalPrice = paymentRegisterDTO.totalPrice();
+        this.statusPayment = "PENDING";
+    }
+
+    public void updateInformation(PaymentUpdateDTO paymentUpdateDTO) {
+        if (paymentUpdateDTO.datePayment() != null) {
+            this.datePayment = paymentUpdateDTO.datePayment();
+        }
+
+        if (paymentUpdateDTO.statusPayment() != null) {
+            this.statusPayment = paymentUpdateDTO.statusPayment();
+        }
+    }
 }

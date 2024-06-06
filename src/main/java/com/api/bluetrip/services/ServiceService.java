@@ -17,13 +17,22 @@ import org.springframework.stereotype.Service;
 public class ServiceService {
     private final ServiceRepository serviceRepository;
 
+    private final LocalBusinessService localBusinessService;
+
     @Autowired
-    public ServiceService(ServiceRepository serviceRepository) {
+    public ServiceService(ServiceRepository serviceRepository, LocalBusinessService localBusinessService) {
         this.serviceRepository = serviceRepository;
+        this.localBusinessService = localBusinessService;
     }
 
     public ServiceListDTO create(ServiceRegisterDTO serviceRegisterDTO) {
-        return new ServiceListDTO(serviceRepository.save(new com.api.bluetrip.models.Service(serviceRegisterDTO)));
+        com.api.bluetrip.models.Service service = new com.api.bluetrip.models.Service(serviceRegisterDTO);
+
+        service.setLocalBusiness(localBusinessService.get(serviceRegisterDTO.localBusinessId()));
+
+        serviceRepository.save(service);
+
+        return new ServiceListDTO(service);
     }
 
     public DetailedServiceDTO findById(Long id) {
@@ -42,5 +51,9 @@ public class ServiceService {
 
     public void delete(Long id) {
         serviceRepository.deleteById(id);
+    }
+
+    public com.api.bluetrip.models.Service get(Long id) {
+        return serviceRepository.getReferenceById(id);
     }
 }

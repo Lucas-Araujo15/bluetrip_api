@@ -26,26 +26,26 @@ public class ServiceUsageController {
         this.serviceUsageService = serviceUsageService;
     }
 
-//    @PostMapping
-//    public ResponseEntity<EntityModel<ServiceUsageListDTO>> create(@RequestBody @Valid ServiceUsageRegisterDTO serviceUsageRegisterDTO) {
-//        ServiceUsageListDTO serviceUsageListDTO = serviceUsageService.create(serviceUsageRegisterDTO);
-//
-//        return ResponseEntity
-//                .created(linkTo(methodOn(ServiceUsageController.class).findById(serviceUsageListDTO.id())).toUri())
-//                .body(EntityModel.of(serviceUsageListDTO,
-//                        linkTo(methodOn(ServiceUsageController.class).findById(serviceUsageListDTO.id())).withSelfRel(),
-//                        linkTo(methodOn(ServiceUsageController.class).find(null)).withRel("service-usages")));
-//    }
-//
-//    @GetMapping
-//    public ResponseEntity<Page<ServiceUsageListDTO>> find(@PageableDefault(size = 10, page = 0) Pageable pagination) {
-//        Page<ServiceUsageListDTO> page = serviceUsageService.find(pagination);
-//        return ResponseEntity.ok(page);
-//    }
-//
-//    @GetMapping("/{id}")
-//    public ResponseEntity<DetailedServiceUsageDTO> findById(@PathVariable("id") Long id) {
-//        DetailedServiceUsageDTO detailedServiceUsageDTO = serviceUsageService.findById(id);
-//        return ResponseEntity.ok(detailedServiceUsageDTO);
-//    }
+    @PostMapping
+    public ResponseEntity<EntityModel<ServiceUsageListDTO>> create(@RequestBody @Valid ServiceUsageRegisterDTO serviceUsageRegisterDTO) {
+        ServiceUsageListDTO serviceUsageListDTO = serviceUsageService.create(serviceUsageRegisterDTO);
+
+        return ResponseEntity
+                .created(linkTo(methodOn(ServiceUsageController.class).findById(serviceUsageListDTO.id())).toUri())
+                .body(EntityModel.of(serviceUsageListDTO,
+                        linkTo(methodOn(ServiceUsageController.class).findById(serviceUsageListDTO.id())).withSelfRel(),
+                        linkTo(methodOn(ServiceUsageController.class).find(null)).withRel("service-usages")));
+    }
+
+    @GetMapping
+    public ResponseEntity<Page<ServiceUsageListDTO>> find(@PageableDefault(size = 10, page = 0) Pageable pagination) {
+        Page<ServiceUsageListDTO> page = serviceUsageService.find(pagination);
+        return ResponseEntity.ok(page);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<DetailedServiceUsageDTO> findById(@PathVariable("id") Long id) {
+        DetailedServiceUsageDTO detailedServiceUsageDTO = serviceUsageService.findById(id);
+        return ResponseEntity.ok(detailedServiceUsageDTO);
+    }
  }

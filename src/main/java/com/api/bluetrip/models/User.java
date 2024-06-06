@@ -1,6 +1,6 @@
 package com.api.bluetrip.models;
 
-import com.api.bluetrip.controllers.dtos.UserRegisterDTO;
+import com.api.bluetrip.controllers.dtos.user.UserRegisterDTO;
 import com.api.bluetrip.controllers.dtos.user.UserUpdateDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Table(name = "T_BT_USER")
 @AllArgsConstructor
@@ -19,7 +18,8 @@ import java.util.List;
 @Entity(name = "user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqUser")
+    @SequenceGenerator(name = "seqUser", sequenceName = "SEQ_T_BT_USER", allocationSize = 1)
     @Column(name = "id_user", nullable = false)
     private Long id;
 
@@ -39,6 +39,7 @@ public class User {
         this.email = userRegisterDTO.email();
         this.userType = userRegisterDTO.userType();
         this.password = userRegisterDTO.password();
+        this.createdAt = LocalDateTime.now();
     }
 
     public void updateInformation(UserUpdateDTO userUpdateDTO) {

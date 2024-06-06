@@ -1,8 +1,7 @@
 package com.api.bluetrip.controllers.dtos.localbusiness;
 
-import com.api.bluetrip.controllers.dtos.UserRegisterDTO;
+import com.api.bluetrip.controllers.dtos.user.UserRegisterDTO;
 import com.api.bluetrip.controllers.dtos.address.AddressRegisterDTO;
-import jakarta.persistence.Column;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

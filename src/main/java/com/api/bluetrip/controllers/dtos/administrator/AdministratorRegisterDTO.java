@@ -1,6 +1,6 @@
 package com.api.bluetrip.controllers.dtos.administrator;
 
-import com.api.bluetrip.controllers.dtos.UserRegisterDTO;
+import com.api.bluetrip.controllers.dtos.user.UserRegisterDTO;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 

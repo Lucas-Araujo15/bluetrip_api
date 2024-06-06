@@ -40,7 +40,9 @@ public class TouristService {
 
         tourist.updateInformation(touristUpdateDTO);
 
-        userService.update(tourist.getUser().getId(), touristUpdateDTO.user());
+        if (touristUpdateDTO.user() != null) {
+            userService.update(tourist.getUser().getId(), touristUpdateDTO.user());
+        }
 
         touristRepository.save(tourist);
 
@@ -49,6 +51,10 @@ public class TouristService {
 
     public void delete(Long id) {
         touristRepository.deleteById(id);
+    }
+
+    public Tourist get(Long id) {
+        return touristRepository.getReferenceById(id);
     }
 
 }

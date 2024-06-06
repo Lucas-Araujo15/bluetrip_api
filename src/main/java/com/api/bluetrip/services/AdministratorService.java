@@ -40,7 +40,9 @@ public class AdministratorService {
 
         administrator.updateInformation(administratorUpdateDTO);
 
-        userService.update(administrator.getUser().getId(), administratorUpdateDTO.user());
+        if (administratorUpdateDTO.user() != null) {
+            userService.update(administrator.getUser().getId(), administratorUpdateDTO.user());
+        }
 
         administratorRepository.save(administrator);
 

@@ -40,7 +40,9 @@ public class TouristSpotService {
 
         touristSpot.updateInformation(touristSpotUpdateDTO);
 
-        addressService.update(touristSpot.getAddress().getId(), touristSpotUpdateDTO.address());
+        if (touristSpotUpdateDTO.address() != null) {
+            addressService.update(touristSpot.getAddress().getId(), touristSpotUpdateDTO.address());
+        }
 
         touristSpotRepository.save(touristSpot);
 

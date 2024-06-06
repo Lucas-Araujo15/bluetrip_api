@@ -4,10 +4,7 @@ import com.api.bluetrip.controllers.dtos.localbusiness.DetailedLocalBusinessDTO;
 import com.api.bluetrip.controllers.dtos.localbusiness.LocalBusinessListDTO;
 import com.api.bluetrip.controllers.dtos.localbusiness.LocalBusinessRegisterDTO;
 import com.api.bluetrip.controllers.dtos.localbusiness.LocalBusinessUpdateDTO;
-import com.api.bluetrip.controllers.dtos.tourist.DetailedTouristDTO;
-import com.api.bluetrip.controllers.dtos.tourist.TouristUpdateDTO;
 import com.api.bluetrip.models.LocalBusiness;
-import com.api.bluetrip.models.Tourist;
 import com.api.bluetrip.repositories.LocalBusinessRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -50,12 +47,20 @@ public class LocalBusinessService {
 
         localBusiness.updateInformation(localBusinessUpdateDTO);
 
-        addressService.update(localBusiness.getAddress().getId(), localBusinessUpdateDTO.address());
+        if (localBusinessUpdateDTO.address() != null) {
+            addressService.update(localBusiness.getAddress().getId(), localBusinessUpdateDTO.address());
+        }
 
-        userService.update(localBusiness.getUser().getId(), localBusinessUpdateDTO.user());
+        if (localBusinessUpdateDTO.user() != null) {
+            userService.update(localBusiness.getUser().getId(), localBusinessUpdateDTO.user());
+        }
 
         localBusinessRepository.save(localBusiness);
 
         return new DetailedLocalBusinessDTO(localBusiness);
+    }
+
+    public LocalBusiness get(Long id) {
+        return localBusinessRepository.getReferenceById(id);
     }
 }

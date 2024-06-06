@@ -19,7 +19,8 @@ import java.util.List;
 @Entity(name = "event")
 public class Event {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqEvent")
+    @SequenceGenerator(name = "seqEvent", sequenceName = "SEQ_T_BT_EVENT", allocationSize = 1)
     @Column(name = "id_event", nullable = false)
     private Long id;
 
@@ -42,7 +43,7 @@ public class Event {
     private LocalDateTime dateEnd;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_tourist_spot")
+    @JoinColumn(name = "t_bt_tourist_spot_id_tourist_spot")
     private TouristSpot touristSpot;
 
     public Event(EventRegisterDTO eventRegisterDTO) {

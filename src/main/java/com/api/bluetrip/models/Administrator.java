@@ -16,7 +16,9 @@ import lombok.Setter;
 @Entity(name = "administrator")
 public class Administrator {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqAdministrator")
+    @SequenceGenerator(name = "seqAdministrator", sequenceName = "SEQ_T_BT_ADMINISTRATOR", allocationSize = 1)
+    @Column(name = "id_administrator", nullable = false)
     private Long id;
 
     @Column(name = "ds_name", nullable = false)
@@ -29,7 +31,7 @@ public class Administrator {
     private String role;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_user")
+    @JoinColumn(name = "t_bt_user_id_user")
     private User user;
 
     public Administrator(AdministratorRegisterDTO administratorRegisterDTO) {

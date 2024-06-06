@@ -21,26 +21,25 @@ public class BookingController {
         this.bookingService = bookingService;
     }
 
-//    @PostMapping
-//    public ResponseEntity<EntityModel<BookingListDTO>> create(@RequestBody @Valid BookingRegisterDTO bookingRegisterDTO) {
-//        BookingListDTO bookingListDTO = bookingService.create(bookingRegisterDTO);
-//
-//        return ResponseEntity
-//                .created(linkTo(methodOn(BookingController.class).findById(bookingListDTO.id())).toUri())
-//                .body(EntityModel.of(bookingListDTO,
-//                        linkTo(methodOn(BookingController.class).findById(bookingListDTO.id())).withSelfRel(),
-//                        linkTo(methodOn(BookingController.class).find(null)).withRel("bookings")));
-//    }
-//
-//    @GetMapping("/{id}")
-//    public ResponseEntity<DetailedBookingDTO> findById(@PathVariable("id") Long id) {
-//        DetailedBookingDTO detailedBookingDTO = bookingService.findById(id);
-//        return ResponseEntity.ok(detailedBookingDTO);
-//    }
-//
-//    @DeleteMapping("/{id}")
-//    public ResponseEntity<?> delete(@PathVariable("id") Long id) {
-//        bookingService.delete(id);
-//        return ResponseEntity.noContent().build();
-//    }
+    @PostMapping
+    public ResponseEntity<EntityModel<BookingListDTO>> create(@RequestBody @Valid BookingRegisterDTO bookingRegisterDTO) {
+        BookingListDTO bookingListDTO = bookingService.create(bookingRegisterDTO);
+
+        return ResponseEntity
+                .created(linkTo(methodOn(BookingController.class).findById(bookingListDTO.id())).toUri())
+                .body(EntityModel.of(bookingListDTO,
+                        linkTo(methodOn(BookingController.class).findById(bookingListDTO.id())).withSelfRel()));
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<DetailedBookingDTO> findById(@PathVariable("id") Long id) {
+        DetailedBookingDTO detailedBookingDTO = bookingService.findById(id);
+        return ResponseEntity.ok(detailedBookingDTO);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") Long id) {
+        bookingService.delete(id);
+        return ResponseEntity.noContent().build();
+    }
 }

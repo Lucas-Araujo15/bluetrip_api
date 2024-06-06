@@ -16,7 +16,8 @@ import lombok.Setter;
 @Entity(name = "address")
 public class Address {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqAddress")
+    @SequenceGenerator(name = "seqAddress", sequenceName = "SEQ_T_BT_ADDRESS", allocationSize = 1)
     @Column(name = "id_address", nullable = false)
     private Long id;
 

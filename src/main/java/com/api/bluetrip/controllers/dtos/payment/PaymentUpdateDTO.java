@@ -1,4 +1,9 @@
 package com.api.bluetrip.controllers.dtos.payment;
 
-public record PaymentUpdateDTO() {
+import java.time.LocalDateTime;
+
+public record PaymentUpdateDTO(
+        String statusPayment,
+        LocalDateTime datePayment
+) {
 }

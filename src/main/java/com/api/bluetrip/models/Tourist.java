@@ -19,7 +19,8 @@ import java.util.List;
 @Entity(name = "tourist")
 public class Tourist {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqTourist")
+    @SequenceGenerator(name = "seqTourist", sequenceName = "SEQ_T_BT_TOURIST", allocationSize = 1)
     @Column(name = "id_tourist", nullable = false)
     private Long id;
 
@@ -42,15 +43,15 @@ public class Tourist {
     private String language;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_user")
+    @JoinColumn(name = "t_bt_user_id_user")
     private User user;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_service_usage")
+    @JoinColumn(name = "t_bt_tourist_id_tourist")
     private List<ServiceUsage> serviceUsageList;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_booking")
+    @JoinColumn(name = "t_bt_tourist_id_tourist")
     private List<Booking> bookingList;
 
     public Tourist(TouristRegisterDTO touristRegisterDTO) {

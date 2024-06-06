@@ -1,4 +1,4 @@
-package com.api.bluetrip.controllers.dtos;
+package com.api.bluetrip.controllers.dtos.user;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

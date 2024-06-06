@@ -18,7 +18,8 @@ import java.util.List;
 @Entity(name = "service")
 public class Service {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqService")
+    @SequenceGenerator(name = "seqService", sequenceName = "SEQ_T_BT_SERVICE", allocationSize = 1)
     @Column(name = "id_service", nullable = false)
     private Long id;
 
@@ -35,11 +36,11 @@ public class Service {
     private String category;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_local_business")
+    @JoinColumn(name = "t_bt_local_business_id_local_business")
     private LocalBusiness localBusiness;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_service")
+    @JoinColumn(name = "t_bt_service_id_service")
     private List<ServiceUsage> serviceUsageList;
 
     public Service(ServiceRegisterDTO serviceRegisterDTO) {

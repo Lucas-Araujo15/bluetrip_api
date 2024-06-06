@@ -19,7 +19,8 @@ import java.util.List;
 @Entity(name = "local_business")
 public class LocalBusiness {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqLocalBusiness")
+    @SequenceGenerator(name = "seqLocalBusiness", sequenceName = "SEQ_T_BT_LOCAL_BUSINESS", allocationSize = 1)
     @Column(name = "id_local_business", nullable = false)
     private Long id;
 
@@ -51,15 +52,15 @@ public class LocalBusiness {
     private String businessCategory;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_user")
+    @JoinColumn(name = "t_bt_user_id_user")
     private User user;
 
     @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_address")
+    @JoinColumn(name = "t_bt_address_id_address")
     private Address address;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_local_business")
+    @JoinColumn(name = "t_bt_local_business_id_local_business")
     private List<Service> serviceList;
 
     public LocalBusiness(LocalBusinessRegisterDTO localBusinessRegisterDTO) {
