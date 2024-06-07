@@ -1,0 +1,44 @@
+version: '3.8'
+
+services:
+  oracle-db:
+    image: gvenzl/oracle-xe:18.4.0-slim
+    container_name: oracle-db
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    environment:
+      ORACLE_RANDOM_PASSWORD: true
+      APP_USER: bluetrip
+      APP_USER_PASSWORD: bluetrip
+    volumes:
+      - oracle-data:/opt/oracle/oradata
+    networks:
+      - oracle
+
+  java-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        JAR_FILE: ./build/libs/*.jar
+        DATASOURCE_URL: jdbc:oracle:thin:@//oracle-db:1521/FREEPDB1
+        DATASOURCE_USERNAME: bluetrip
+        DATASOURCE_PASSWORD: bluetrip
+    container_name: java-app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - oracle-db
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+    networks:
+      - oracle
+
+volumes:
+  oracle-data:
+    driver: local
+
+networks:
+  oracle:
+    driver: bridge
