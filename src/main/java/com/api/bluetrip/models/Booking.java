@@ -31,11 +31,11 @@ public class Booking {
     @Column(name = "nr_quantity", nullable = false)
     private int quantity;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "t_bt_tourist_id_tourist")
     private Tourist tourist;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "t_bt_tourist_spot_id_tourist_spot")
     private TouristSpot touristSpot;
 
@@ -46,6 +46,7 @@ public class Booking {
     public Booking(BookingRegisterDTO bookingRegisterDTO) {
         this.dateBooking = bookingRegisterDTO.dateBooking();
         this.quantity = bookingRegisterDTO.quantity();
+        this.statusBooking = "SCHEDULED";
         this.payment = new Payment(bookingRegisterDTO.payment());
     }
 }

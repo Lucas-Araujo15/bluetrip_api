@@ -35,7 +35,7 @@ public class Service {
     @Column(name = "ds_category", nullable = false)
     private String category;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "t_bt_local_business_id_local_business")
     private LocalBusiness localBusiness;
 

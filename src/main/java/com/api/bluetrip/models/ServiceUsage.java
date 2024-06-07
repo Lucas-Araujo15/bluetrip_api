@@ -31,11 +31,11 @@ public class ServiceUsage {
     @Column(name = "tx_comment", nullable = true)
     private String comment;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "t_bt_service_id_service")
     private Service service;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "t_bt_tourist_id_tourist")
     private Tourist tourist;
 

@@ -3,7 +3,7 @@ package com.api.bluetrip.controllers.dtos.localbusiness;
 import com.api.bluetrip.controllers.dtos.address.AddressUpdateDTO;
 import com.api.bluetrip.controllers.dtos.user.UserUpdateDTO;
 
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
 public record LocalBusinessUpdateDTO(
         String tradeName,
@@ -14,9 +14,9 @@ public record LocalBusinessUpdateDTO(
 
         String urlImage,
 
-        LocalTime openHour,
+        LocalDateTime openHour,
 
-        LocalTime closeHour,
+        LocalDateTime closeHour,
 
         String phone,
 

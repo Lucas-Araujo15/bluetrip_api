@@ -66,7 +66,7 @@ public class EventController {
     }
 
     @GetMapping("/hateoas")
-    public CollectionModel<EntityModel<EventListDTO>> findAllEventssHateoas(@PageableDefault(size = 10, page = 0) Pageable pagination) {
+    public CollectionModel<EntityModel<EventListDTO>> findAllEventsHateoas(@PageableDefault(size = 10, page = 0) Pageable pagination) {
         List<EntityModel<EventListDTO>> events = eventService.find(pagination).stream()
                 .map(event -> EntityModel.of(event,
                         linkTo(methodOn(EventController.class).findById(event.id())).withSelfRel()))

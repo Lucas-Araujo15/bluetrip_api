@@ -42,7 +42,7 @@ public class Event {
     @Column(name = "dt_end", nullable = true)
     private LocalDateTime dateEnd;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @ManyToOne
     @JoinColumn(name = "t_bt_tourist_spot_id_tourist_spot")
     private TouristSpot touristSpot;
 

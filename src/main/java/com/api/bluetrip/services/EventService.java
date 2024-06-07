@@ -28,9 +28,7 @@ public class EventService {
 
         event.setTouristSpot(touristSpotService.get(eventRegisterDTO.touristSpotId()));
 
-        eventRepository.save(new Event(eventRegisterDTO));
-
-        return new EventListDTO(event);
+        return new EventListDTO(eventRepository.save(new Event(eventRegisterDTO)));
     }
 
     public Page<EventListDTO> find(Pageable pagination) {

@@ -6,6 +6,7 @@ import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public record LocalBusinessRegisterDTO(
@@ -22,10 +23,10 @@ public record LocalBusinessRegisterDTO(
         String urlImage,
 
         @NotNull
-        LocalTime openHour,
+        LocalDateTime openHour,
 
         @NotNull
-        LocalTime closeHour,
+        LocalDateTime closeHour,
 
         @NotBlank
         String phone,

@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
@@ -40,10 +41,10 @@ public class LocalBusiness {
     private String urlImage;
 
     @Column(name = "ds_open_hour", nullable = false)
-    private LocalTime openHour;
+    private LocalDateTime openHour;
 
     @Column(name = "ds_close_hour", nullable = false)
-    private LocalTime closeHour;
+    private LocalDateTime closeHour;
 
     @Column(name = "nr_phone", nullable = false)
     private String phone;
