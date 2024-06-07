@@ -5,21 +5,17 @@ import io.swagger.v3.oas.models.info.Contact;
 import io.swagger.v3.oas.models.info.Info;
 import io.swagger.v3.oas.models.info.License;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
+@Configuration
 public class SwaggerConfig {
     @Bean
     public OpenAPI OpenApiConfiguration() {
         return new OpenAPI()
                 .info(new Info()
-                        .title("Bluetrip")
+                        .title("Bluetrip - API")
                         .version("0.0.1")
-                        .description("Sistema de gerenciamento de \n" +
-                                "cursos para uma universidade. Este sistema deve permite a administração de cursos, \n" +
-                                "alunos, e professores, além de gerenciar as inscrições dos alunos nos cursos")
-                        .contact(new Contact()
-                                .email("lucasaraujo4188@gmail.com")
-                                .name("Lucas Araujo")
-                                .url("https://github.com/Lucas-Araujo15"))
+                        .description("O Bluetrip é um projeto que visa ser uma plataforma de turismo azul. Ele se destina a conectar comerciantes locais e visitantes, apoiar comunidades costeiras, gerenciar pontos turísticos para evitar superlotações, utilizar inteligência artificial para recomendar rotas personalizadas e promover atividades turísticas sustentáveis ao longo do ano em regiões costeiras.")
                         .license(new License()));
     }
 }
