@@ -31,9 +31,6 @@ As principais tecnologias, bibliotecas, ecossistemas e frameworks incluídos no 
 
 ![Relational_1_page-0001](https://github.com/Lucas-Araujo15/bluetrip_api/assets/82396035/bc6150fc-612a-46f7-842d-c52b999af2cf)
 
-## 👷 Arquitetura
-![diagrama_bluetrip](https://github.com/Lucas-Araujo15/bluetrip_api/assets/82396035/6151e558-d304-4405-926c-ee646f2a4d9d)
-
 ## 🖌️ Vídeo Demonstração
 [![](https://img.youtube.com/vi/VlPLWYjzv_c/0.jpg)](https://youtu.be/VlPLWYjzv_c?si=7-stVhuEgJhBblHT)
 
