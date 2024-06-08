@@ -77,7 +77,7 @@ O arquivo define dois serviços: oracle-db e java-app.
 
 ##### Serviço oracle-db
 ```yml
-racle-db:
+oracle-db:
   image: gvenzl/oracle-xe:18.4.0-slim
   container_name: oracle-db
   ports:
