@@ -19,8 +19,7 @@ import java.util.List;
 @Entity(name = "event")
 public class Event {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqEvent")
-    @SequenceGenerator(name = "seqEvent", sequenceName = "SEQ_T_BT_EVENT", allocationSize = 1)
+    @GeneratedValue
     @Column(name = "id_event", nullable = false)
     private Long id;
 

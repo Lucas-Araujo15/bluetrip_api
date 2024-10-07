@@ -16,8 +16,7 @@ import lombok.Setter;
 @Entity(name = "administrator")
 public class Administrator {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqAdministrator")
-    @SequenceGenerator(name = "seqAdministrator", sequenceName = "SEQ_T_BT_ADMINISTRATOR", allocationSize = 1)
+    @GeneratedValue
     @Column(name = "id_administrator", nullable = false)
     private Long id;
 

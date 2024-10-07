@@ -18,8 +18,7 @@ import java.util.List;
 @Entity(name = "tourist_spot")
 public class TouristSpot {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqTouristSpot")
-    @SequenceGenerator(name = "seqTouristSpot", sequenceName = "SEQ_T_BT_TOURIST_SPOT", allocationSize = 1)
+    @GeneratedValue
     @Column(name = "id_tourist_spot", nullable = false)
     private Long id;
 

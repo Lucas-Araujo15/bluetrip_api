@@ -20,8 +20,7 @@ import java.util.List;
 @Entity(name = "local_business")
 public class LocalBusiness {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seqLocalBusiness")
-    @SequenceGenerator(name = "seqLocalBusiness", sequenceName = "SEQ_T_BT_LOCAL_BUSINESS", allocationSize = 1)
+    @GeneratedValue
     @Column(name = "id_local_business", nullable = false)
     private Long id;
 

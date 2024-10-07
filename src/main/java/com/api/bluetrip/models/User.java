@@ -18,8 +18,7 @@ import java.time.LocalDateTime;
 @Entity(name = "user")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqUser")
-    @SequenceGenerator(name = "seqUser", sequenceName = "SEQ_T_BT_USER", allocationSize = 1)
+    @GeneratedValue
     @Column(name = "id_user", nullable = false)
     private Long id;
 

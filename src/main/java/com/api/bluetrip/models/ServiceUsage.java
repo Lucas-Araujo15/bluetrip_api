@@ -17,8 +17,7 @@ import java.time.LocalDateTime;
 @Entity(name = "service_usage")
 public class ServiceUsage {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO, generator = "seqServiceUsage")
-    @SequenceGenerator(name = "seqServiceUsage", sequenceName = "SEQ_T_BT_SERVICE_USAGE", allocationSize = 1)
+    @GeneratedValue
     @Column(name = "id_service_usage", nullable = false)
     private Long id;
 
