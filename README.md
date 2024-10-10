@@ -19,7 +19,7 @@ As principais tecnologias, bibliotecas, ecossistemas e frameworks incluídos no 
 - Spring Boot
 - Lombok
 - Bean Validation
-- H2 Database
+- Oracle Database
 - Spring Data JPA
 - Swagger
 - Spring HATEOAS
