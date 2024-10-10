@@ -1,0 +1,3467 @@
+{
+	"info": {
+		"_postman_id": "6d33bc13-4b16-4315-b63f-467dedf00fdc",
+		"name": "Bluetrip - API",
+		"description": "O Bluetrip é um projeto que visa ser uma plataforma de turismo azul. Ele se destina a conectar comerciantes locais e visitantes, apoiar comunidades costeiras, gerenciar pontos turísticos para evitar superlotações, utilizar inteligência artificial para recomendar rotas personalizadas e promover atividades turísticas sustentáveis ao longo do ano em regiões costeiras.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "tourist",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find By Id",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/tourist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tourist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"nationality\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"dateOfBirth\": \"<date>\",\n  \"gender\": \"<string>\",\n  \"language\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"userType\": \"<string>\"\n  },\n  \"serviceUsages\": [\n    {\n      \"dateUsage\": \"<dateTime>\",\n      \"rate\": \"<float>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"dateUsage\": \"<dateTime>\",\n      \"rate\": \"<float>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"bookingList\": [\n    {\n      \"dateBooking\": \"<dateTime>\",\n      \"statusBooking\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"payment\": {\n        \"paymentMethod\": \"<string>\",\n        \"totalPrice\": \"<float>\",\n        \"statusPayment\": \"<string>\",\n        \"datePayment\": \"<dateTime>\"\n      }\n    },\n    {\n      \"dateBooking\": \"<dateTime>\",\n      \"statusBooking\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"payment\": {\n        \"paymentMethod\": \"<string>\",\n        \"totalPrice\": \"<float>\",\n        \"statusPayment\": \"<string>\",\n        \"datePayment\": \"<dateTime>\"\n      }\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"anim esse et\",\n  \"nationality\": \"dolore sunt eiusmod\",\n  \"phone\": \"sit a\",\n  \"dateOfBirth\": \"2021-10-02\",\n  \"gender\": \"ipsum culpa\",\n  \"language\": \"occaecat labo\",\n  \"user\": {\n    \"email\": \"Excepteur occaecat esse anim laboris\",\n    \"password\": \"Lorem adipisicing proident ea est\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"nationality\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"dateOfBirth\": \"<date>\",\n  \"gender\": \"<string>\",\n  \"language\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/tourist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tourist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"nationality\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"dateOfBirth\": \"<date>\",\n  \"gender\": \"<string>\",\n  \"language\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"userType\": \"<string>\"\n  },\n  \"serviceUsages\": [\n    {\n      \"dateUsage\": \"<dateTime>\",\n      \"rate\": \"<float>\",\n      \"comment\": \"<string>\"\n    },\n    {\n      \"dateUsage\": \"<dateTime>\",\n      \"rate\": \"<float>\",\n      \"comment\": \"<string>\"\n    }\n  ],\n  \"bookingList\": [\n    {\n      \"dateBooking\": \"<dateTime>\",\n      \"statusBooking\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"payment\": {\n        \"paymentMethod\": \"<string>\",\n        \"totalPrice\": \"<float>\",\n        \"statusPayment\": \"<string>\",\n        \"datePayment\": \"<dateTime>\"\n      }\n    },\n    {\n      \"dateBooking\": \"<dateTime>\",\n      \"statusBooking\": \"<string>\",\n      \"quantity\": \"<integer>\",\n      \"payment\": {\n        \"paymentMethod\": \"<string>\",\n        \"totalPrice\": \"<float>\",\n        \"statusPayment\": \"<string>\",\n        \"datePayment\": \"<dateTime>\"\n      }\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/tourist/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tourist",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<object>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/tourist?page=74903618&size=13919029&sort=[\"culpa veniam adipisicing\",\"velit\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tourist"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "74903618",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "13919029",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"culpa veniam adipisicing\",\"velit\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"pageable\": {\n    \"paged\": \"<boolean>\",\n    \"pageNumber\": \"<integer>\",\n    \"pageSize\": \"<integer>\",\n    \"offset\": \"<long>\",\n    \"sort\": [\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      },\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      }\n    ],\n    \"unpaged\": \"<boolean>\"\n  },\n  \"size\": \"<integer>\",\n  \"content\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"phone\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"phone\": \"<string>\"\n    }\n  ],\n  \"number\": \"<integer>\",\n  \"sort\": [\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    },\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    }\n  ],\n  \"numberOfElements\": \"<integer>\",\n  \"first\": \"<boolean>\",\n  \"last\": \"<boolean>\",\n  \"empty\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"dateOfBirth\": \"2002-01-01\",\n  \"gender\": \"proident anim ea\",\n  \"language\": \"aute proident\",\n  \"name\": \"sunt\",\n  \"nationality\": \"et est irure esse\",\n  \"phone\": \"occaecat amet\",\n  \"user\": {\n    \"email\": \"dolore mollit enim\",\n    \"password\": \"voluptate nisi dolor et\",\n    \"userType\": \"sunt\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/tourist",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tourist"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dateOfBirth\": \"<date>\",\n  \"gender\": \"<string>\",\n  \"language\": \"<string>\",\n  \"name\": \"<string>\",\n  \"nationality\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"userType\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"_links\": {\n    \"exercitation_ceb\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "find All Tourists Hateoas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/tourist/hateoas?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tourist",
+										"hateoas"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist/hateoas?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist",
+												"hateoas"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"_embedded\": {\n    \"touristListDTOList\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"_links\": {\n          \"officia_996\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          },\n          \"deserunt_9\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          },\n          \"est_bd\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"phone\": \"<string>\",\n        \"_links\": {\n          \"elit_a9\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      }\n    ]\n  },\n  \"_links\": {\n    \"occaecat_62\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "tourist-spot",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find By Id 1",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist-spot/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist-spot",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/tourist-spot/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tourist-spot",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"averageRate\": \"<float>\",\n  \"price\": \"<float>\",\n  \"phone\": \"<string>\",\n  \"urlImage\": \"<string>\",\n  \"category\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<float>\",\n      \"urlImage\": \"<string>\",\n      \"dateStart\": \"<dateTime>\",\n      \"dateEnd\": \"<dateTime>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<float>\",\n      \"urlImage\": \"<string>\",\n      \"dateStart\": \"<dateTime>\",\n      \"dateEnd\": \"<dateTime>\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "update 1",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"proident laborum\",\n  \"description\": \"in\",\n  \"averageRate\": 55671792.87724388,\n  \"price\": -80943267.7601909,\n  \"phone\": \"tempor consectetur quis dolore\",\n  \"urlImage\": \"dolore adipisicing qui\",\n  \"category\": \"esse id fugiat officia\",\n  \"address\": {\n    \"street\": \"aute et eu\",\n    \"city\": \"laborum\",\n    \"zipCode\": \"velit quis dolor ex\",\n    \"state\": \"nisi esse\",\n    \"neighborhood\": \"amet irure non velit\",\n    \"numberBuilding\": \"nisi Ut eiusmod deserunt\",\n    \"complement\": \"nisi elit nulla\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist-spot/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist-spot",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"averageRate\": \"<float>\",\n  \"price\": \"<float>\",\n  \"phone\": \"<string>\",\n  \"urlImage\": \"<string>\",\n  \"category\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/tourist-spot/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tourist-spot",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"averageRate\": \"<float>\",\n  \"price\": \"<float>\",\n  \"phone\": \"<string>\",\n  \"urlImage\": \"<string>\",\n  \"category\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  },\n  \"events\": [\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<float>\",\n      \"urlImage\": \"<string>\",\n      \"dateStart\": \"<dateTime>\",\n      \"dateEnd\": \"<dateTime>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<float>\",\n      \"urlImage\": \"<string>\",\n      \"dateStart\": \"<dateTime>\",\n      \"dateEnd\": \"<dateTime>\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "delete 1",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist-spot/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist-spot",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/tourist-spot/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"tourist-spot",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<object>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find 1",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/tourist-spot?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tourist-spot"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist-spot?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist-spot"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"pageable\": {\n    \"paged\": \"<boolean>\",\n    \"pageNumber\": \"<integer>\",\n    \"pageSize\": \"<integer>\",\n    \"offset\": \"<long>\",\n    \"sort\": [\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      },\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      }\n    ],\n    \"unpaged\": \"<boolean>\"\n  },\n  \"size\": \"<integer>\",\n  \"content\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ],\n  \"number\": \"<integer>\",\n  \"sort\": [\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    },\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    }\n  ],\n  \"numberOfElements\": \"<integer>\",\n  \"first\": \"<boolean>\",\n  \"last\": \"<boolean>\",\n  \"empty\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "create 1",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"averageRate\": -51665896.312935986,\n  \"category\": \"proident consequat cupidatat\",\n  \"description\": \"tempor voluptate\",\n  \"name\": \"magna cillum commodo reprehenderit nostrud\",\n  \"phone\": \"dolore\",\n  \"price\": -72011300.10264522,\n  \"urlImage\": \"minim dolor culpa\",\n  \"address\": {\n    \"city\": \"consectetur sed aliqua\",\n    \"neighborhood\": \"lab\",\n    \"state\": \"sunt nulla\",\n    \"street\": \"aute incididunt est irure\",\n    \"zipCode\": \"labore ut ex consectetur nulla\",\n    \"numberBuilding\": \"ipsum nul\",\n    \"complement\": \"sed ut\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/tourist-spot",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tourist-spot"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"averageRate\": \"<float>\",\n  \"category\": \"<string>\",\n  \"description\": \"<string>\",\n  \"name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"price\": \"<float>\",\n  \"urlImage\": \"<string>\",\n  \"address\": {\n    \"city\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"state\": \"<string>\",\n    \"street\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist-spot",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist-spot"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"_links\": {\n    \"nulla_7\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "find All Tourist Spots Hateoas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/tourist-spot/hateoas?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"tourist-spot",
+										"hateoas"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/tourist-spot/hateoas?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"tourist-spot",
+												"hateoas"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"_embedded\": {\n    \"touristSpotListDTOList\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"_links\": {\n          \"labore_9\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          },\n          \"sunt__\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"_links\": {\n          \"cillum_5f\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          },\n          \"elit_8\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      }\n    ]\n  },\n  \"_links\": {\n    \"quic\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "service",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find By Id 2",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/service/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"service",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/service/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"service",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<float>\",\n  \"category\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "update 2",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"laborum consectetur dolor ea\",\n  \"description\": \"sed\",\n  \"price\": -50565978.64240704,\n  \"category\": \"exercitation\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/service/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"service",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<float>\",\n  \"category\": \"<string>\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/service/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"service",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<float>\",\n  \"category\": \"<string>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete 2",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/service/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"service",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/service/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"service",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<object>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "create 2",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"category\": \"anim conse\",\n  \"description\": \"eiusmod aute\",\n  \"localBusinessId\": 69432810,\n  \"name\": \"eiusmod ut\",\n  \"price\": -85875583.07755865\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/service",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"service"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"category\": \"<string>\",\n  \"description\": \"<string>\",\n  \"localBusinessId\": \"<long>\",\n  \"name\": \"<string>\",\n  \"price\": \"<float>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/service",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"service"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"_links\": {\n    \"nulla_7\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "local-business",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find By Id 4",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/local-business/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"local-business",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/local-business/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"local-business",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"tradeName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"urlWebsite\": \"<string>\",\n  \"urlImage\": \"<string>\",\n  \"openHour\": \"<dateTime>\",\n  \"closeHour\": \"<dateTime>\",\n  \"phone\": \"<string>\",\n  \"businessCategory\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"userType\": \"<string>\"\n  },\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  },\n  \"services\": [\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<float>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<float>\",\n      \"category\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "update 4",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"tradeName\": \"et officia deserunt qui fugiat\",\n  \"description\": \"culpa\",\n  \"urlWebsite\": \"sint laborum ullamco adipisicing culpa\",\n  \"urlImage\": \"enim qui voluptate reprehenderit\",\n  \"openHour\": \"1984-04-02T23:47:40.371Z\",\n  \"closeHour\": \"1965-07-16T18:05:41.646Z\",\n  \"phone\": \"enim anim\",\n  \"businessCategory\": \"ea dolor nulla commodo\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  },\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/local-business/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"local-business",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"tradeName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"urlWebsite\": \"<string>\",\n  \"urlImage\": \"<string>\",\n  \"openHour\": \"<dateTime>\",\n  \"closeHour\": \"<dateTime>\",\n  \"phone\": \"<string>\",\n  \"businessCategory\": \"<string>\",\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  },\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/local-business/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"local-business",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"tradeName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"urlWebsite\": \"<string>\",\n  \"urlImage\": \"<string>\",\n  \"openHour\": \"<dateTime>\",\n  \"closeHour\": \"<dateTime>\",\n  \"phone\": \"<string>\",\n  \"businessCategory\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"userType\": \"<string>\"\n  },\n  \"address\": {\n    \"street\": \"<string>\",\n    \"city\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"state\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  },\n  \"services\": [\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<float>\",\n      \"category\": \"<string>\"\n    },\n    {\n      \"name\": \"<string>\",\n      \"description\": \"<string>\",\n      \"price\": \"<float>\",\n      \"category\": \"<string>\"\n    }\n  ]\n}"
+										}
+									]
+								},
+								{
+									"name": "delete 3",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/local-business/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"local-business",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/local-business/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"local-business",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<object>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find 3",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/local-business?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"local-business"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/local-business?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"local-business"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"pageable\": {\n    \"paged\": \"<boolean>\",\n    \"pageNumber\": \"<integer>\",\n    \"pageSize\": \"<integer>\",\n    \"offset\": \"<long>\",\n    \"sort\": [\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      },\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      }\n    ],\n    \"unpaged\": \"<boolean>\"\n  },\n  \"size\": \"<integer>\",\n  \"content\": [\n    {\n      \"id\": \"<long>\",\n      \"tradeName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"urlImage\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"tradeName\": \"<string>\",\n      \"description\": \"<string>\",\n      \"urlImage\": \"<string>\"\n    }\n  ],\n  \"number\": \"<integer>\",\n  \"sort\": [\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    },\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    }\n  ],\n  \"numberOfElements\": \"<integer>\",\n  \"first\": \"<boolean>\",\n  \"last\": \"<boolean>\",\n  \"empty\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "create 4",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"businessCategory\": \"aute eiusmod\",\n  \"closeHour\": \"2024-08-21T07:18:58.432Z\",\n  \"description\": \"pariatur in velit cillum est\",\n  \"openHour\": \"1999-11-05T08:39:27.401Z\",\n  \"phone\": \"voluptate aliqua eu\",\n  \"tradeName\": \"commodo\",\n  \"urlImage\": \"ullamco nostrud officia\",\n  \"urlWebsite\": \"do ut incididunt Lorem anim\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"userType\": \"<string>\"\n  },\n  \"address\": {\n    \"city\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"state\": \"<string>\",\n    \"street\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/local-business",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"local-business"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"businessCategory\": \"<string>\",\n  \"closeHour\": \"<dateTime>\",\n  \"description\": \"<string>\",\n  \"openHour\": \"<dateTime>\",\n  \"phone\": \"<string>\",\n  \"tradeName\": \"<string>\",\n  \"urlImage\": \"<string>\",\n  \"urlWebsite\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"userType\": \"<string>\"\n  },\n  \"address\": {\n    \"city\": \"<string>\",\n    \"neighborhood\": \"<string>\",\n    \"state\": \"<string>\",\n    \"street\": \"<string>\",\n    \"zipCode\": \"<string>\",\n    \"numberBuilding\": \"<string>\",\n    \"complement\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/local-business",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"local-business"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"tradeName\": \"<string>\",\n  \"description\": \"<string>\",\n  \"urlImage\": \"<string>\",\n  \"_links\": {\n    \"Duis_59f\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "find All Local Business Hateoas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/local-business/hateoas?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"local-business",
+										"hateoas"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/local-business/hateoas?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"local-business",
+												"hateoas"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"_embedded\": {\n    \"localBusinessListDTOList\": [\n      {\n        \"id\": \"<long>\",\n        \"tradeName\": \"<string>\",\n        \"description\": \"<string>\",\n        \"urlImage\": \"<string>\",\n        \"_links\": {\n          \"et76\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"tradeName\": \"<string>\",\n        \"description\": \"<string>\",\n        \"urlImage\": \"<string>\",\n        \"_links\": {\n          \"labore_2\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      }\n    ]\n  },\n  \"_links\": {\n    \"consecteturd\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"ametb6e\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "event",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find By Id 5",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/event/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/event/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"event",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<float>\",\n  \"urlImage\": \"<string>\",\n  \"dateStart\": \"<dateTime>\",\n  \"dateEnd\": \"<dateTime>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "update 5",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"ut magna esse nostrud\",\n  \"description\": \"incididunt dolore tempor ipsum\",\n  \"price\": 1460675.5709465295,\n  \"urlImage\": \"consectetur est minim\",\n  \"dateStart\": \"1964-10-27T09:42:08.315Z\",\n  \"dateEnd\": \"1961-02-01T21:58:06.501Z\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/event/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<float>\",\n  \"urlImage\": \"<string>\",\n  \"dateStart\": \"<dateTime>\",\n  \"dateEnd\": \"<dateTime>\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/event/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"event",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"price\": \"<float>\",\n  \"urlImage\": \"<string>\",\n  \"dateStart\": \"<dateTime>\",\n  \"dateEnd\": \"<dateTime>\"\n}"
+										}
+									]
+								},
+								{
+									"name": "delete 4",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/event/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/event/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"event",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<object>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find 4",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/event?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"event"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/event?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"pageable\": {\n    \"paged\": \"<boolean>\",\n    \"pageNumber\": \"<integer>\",\n    \"pageSize\": \"<integer>\",\n    \"offset\": \"<long>\",\n    \"sort\": [\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      },\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      }\n    ],\n    \"unpaged\": \"<boolean>\"\n  },\n  \"size\": \"<integer>\",\n  \"content\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\",\n      \"description\": \"<string>\"\n    }\n  ],\n  \"number\": \"<integer>\",\n  \"sort\": [\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    },\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    }\n  ],\n  \"numberOfElements\": \"<integer>\",\n  \"first\": \"<boolean>\",\n  \"last\": \"<boolean>\",\n  \"empty\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "create 5",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"dateEnd\": \"1979-05-04T08:30:59.056Z\",\n  \"dateStart\": \"1950-10-26T17:00:44.370Z\",\n  \"description\": \"labore commodo dolore\",\n  \"name\": \"tempor qui consect\",\n  \"price\": 16971881.20245588,\n  \"touristSpotId\": -404329,\n  \"urlImage\": \"enim commodo qui\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/event",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"event"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dateEnd\": \"<dateTime>\",\n  \"dateStart\": \"<dateTime>\",\n  \"description\": \"<string>\",\n  \"name\": \"<string>\",\n  \"price\": \"<float>\",\n  \"touristSpotId\": \"<long>\",\n  \"urlImage\": \"<string>\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/event",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"description\": \"<string>\",\n  \"_links\": {\n    \"nulla_7\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "find All Events Hateoas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/event/hateoas?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"event",
+										"hateoas"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/event/hateoas?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"event",
+												"hateoas"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"_embedded\": {\n    \"eventListDTOList\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"_links\": {\n          \"fugiat2\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          },\n          \"laboris5\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"description\": \"<string>\",\n        \"_links\": {\n          \"minim_890\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      }\n    ]\n  },\n  \"_links\": {\n    \"voluptateb\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "administrator",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find By Id 7",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/administrator/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"administrator",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/administrator/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"administrator",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"role\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"userType\": \"<string>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "update 6",
+									"request": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"aliqua est sed aliquip \",\n  \"phone\": \"tempor labore\",\n  \"role\": \"occaecat ad id\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/administrator/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"administrator",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n  \"name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"role\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\"\n  }\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/administrator/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"administrator",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"role\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"createdAt\": \"<dateTime>\",\n    \"userType\": \"<string>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "delete 6",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/administrator/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"administrator",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/administrator/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"administrator",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<object>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "find 5",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/administrator?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"administrator"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/administrator?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"administrator"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"pageable\": {\n    \"paged\": \"<boolean>\",\n    \"pageNumber\": \"<integer>\",\n    \"pageSize\": \"<integer>\",\n    \"offset\": \"<long>\",\n    \"sort\": [\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      },\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      }\n    ],\n    \"unpaged\": \"<boolean>\"\n  },\n  \"size\": \"<integer>\",\n  \"content\": [\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"name\": \"<string>\"\n    }\n  ],\n  \"number\": \"<integer>\",\n  \"sort\": [\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    },\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    }\n  ],\n  \"numberOfElements\": \"<integer>\",\n  \"first\": \"<boolean>\",\n  \"last\": \"<boolean>\",\n  \"empty\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "create 7",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"do eiusmod reprehenderit\",\n  \"phone\": \"occaecat ex\",\n  \"role\": \"laborum ipsum fugiat anim dolore\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"userType\": \"<string>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/administrator",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"administrator"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"name\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"role\": \"<string>\",\n  \"user\": {\n    \"email\": \"<string>\",\n    \"password\": \"<string>\",\n    \"userType\": \"<string>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/administrator",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"administrator"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"name\": \"<string>\",\n  \"_links\": {\n    \"in_d42\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "find All Administrators Hateoas",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/administrator/hateoas?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"administrator",
+										"hateoas"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/administrator/hateoas?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"administrator",
+												"hateoas"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"_embedded\": {\n    \"administratorListDTOList\": [\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"_links\": {\n          \"magnaf7e\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          },\n          \"eu_f4e\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          },\n          \"in_5\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      },\n      {\n        \"id\": \"<long>\",\n        \"name\": \"<string>\",\n        \"_links\": {\n          \"Duis_220\": {\n            \"href\": \"<string>\",\n            \"hreflang\": \"<string>\",\n            \"title\": \"<string>\",\n            \"type\": \"<string>\",\n            \"deprecation\": \"<string>\",\n            \"profile\": \"<string>\",\n            \"name\": \"<string>\",\n            \"templated\": \"<boolean>\"\n          }\n        }\n      }\n    ]\n  },\n  \"_links\": {\n    \"officiaa\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"eu_c8\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"ex_d\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "service-usage",
+					"item": [
+						{
+							"name": "find 2",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/service-usage?page=<integer>&size=<integer>&sort=[\"<string>\",\"<string>\"]",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"service-usage"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "size",
+											"value": "<integer>",
+											"description": "(Required) "
+										},
+										{
+											"key": "sort",
+											"value": "[\"<string>\",\"<string>\"]",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/service-usage?page=<integer>&size=<integer>&sort=<string>,<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"service-usage"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "<integer>"
+												},
+												{
+													"key": "size",
+													"value": "<integer>"
+												},
+												{
+													"key": "sort",
+													"value": "<string>,<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"totalPages\": \"<integer>\",\n  \"totalElements\": \"<long>\",\n  \"pageable\": {\n    \"paged\": \"<boolean>\",\n    \"pageNumber\": \"<integer>\",\n    \"pageSize\": \"<integer>\",\n    \"offset\": \"<long>\",\n    \"sort\": [\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      },\n      {\n        \"direction\": \"<string>\",\n        \"nullHandling\": \"<string>\",\n        \"ascending\": \"<boolean>\",\n        \"property\": \"<string>\",\n        \"ignoreCase\": \"<boolean>\"\n      }\n    ],\n    \"unpaged\": \"<boolean>\"\n  },\n  \"size\": \"<integer>\",\n  \"content\": [\n    {\n      \"id\": \"<long>\",\n      \"dateUsage\": \"<dateTime>\"\n    },\n    {\n      \"id\": \"<long>\",\n      \"dateUsage\": \"<dateTime>\"\n    }\n  ],\n  \"number\": \"<integer>\",\n  \"sort\": [\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    },\n    {\n      \"direction\": \"<string>\",\n      \"nullHandling\": \"<string>\",\n      \"ascending\": \"<boolean>\",\n      \"property\": \"<string>\",\n      \"ignoreCase\": \"<boolean>\"\n    }\n  ],\n  \"numberOfElements\": \"<integer>\",\n  \"first\": \"<boolean>\",\n  \"last\": \"<boolean>\",\n  \"empty\": \"<boolean>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "create 3",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"dateUsage\": \"1963-02-21T23:36:35.319Z\",\n  \"serviceId\": 20287866,\n  \"touristId\": 17772769,\n  \"paymentRegisterDTO\": {\n    \"paymentMethod\": \"dol\",\n    \"totalPrice\": 38327088.4659515\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/service-usage",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"service-usage"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"dateUsage\": \"<dateTime>\",\n  \"serviceId\": \"<long>\",\n  \"touristId\": \"<long>\",\n  \"paymentRegisterDTO\": {\n    \"paymentMethod\": \"<string>\",\n    \"totalPrice\": \"<float>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/service-usage",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"service-usage"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"dateUsage\": \"<dateTime>\",\n  \"_links\": {\n    \"est_a4e\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    },\n    \"consequat_02\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						},
+						{
+							"name": "find By Id 3",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/service-usage/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"service-usage",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-69573633",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/service-usage/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"service-usage",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"dateUsage\": \"<dateTime>\",\n  \"rate\": \"<float>\",\n  \"comment\": \"<string>\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "booking",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "find By Id 6",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/booking/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/booking/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"booking",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "{\n  \"dateBooking\": \"<dateTime>\",\n  \"statusBooking\": \"<string>\",\n  \"quantity\": \"<integer>\",\n  \"payment\": {\n    \"paymentMethod\": \"<string>\",\n    \"totalPrice\": \"<float>\",\n    \"statusPayment\": \"<string>\",\n    \"datePayment\": \"<dateTime>\"\n  }\n}"
+										}
+									]
+								},
+								{
+									"name": "delete 5",
+									"request": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/booking/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "-69573633",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/api/booking/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"booking",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "-69573633",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "<object>"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "create 6",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"touristId\": 13585742,\n  \"touristSpotId\": -87944939,\n  \"quantity\": -22319539,\n  \"dateBooking\": \"1954-03-13T21:14:29.281Z\",\n  \"payment\": {\n    \"paymentMethod\": \"<string>\",\n    \"totalPrice\": \"<float>\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/booking",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"booking"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"touristId\": \"<long>\",\n  \"touristSpotId\": \"<long>\",\n  \"quantity\": \"<integer>\",\n  \"dateBooking\": \"<dateTime>\",\n  \"payment\": {\n    \"paymentMethod\": \"<string>\",\n    \"totalPrice\": \"<float>\"\n  }\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/booking",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"booking"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": \"<long>\",\n  \"dateBooking\": \"<dateTime>\",\n  \"_links\": {\n    \"sed7\": {\n      \"href\": \"<string>\",\n      \"hreflang\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\",\n      \"deprecation\": \"<string>\",\n      \"profile\": \"<string>\",\n      \"name\": \"<string>\",\n      \"templated\": \"<boolean>\"\n    }\n  }\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "update 3",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"statusPayment\": \"nulla sed\",\n  \"datePayment\": \"1985-03-13T10:20:48.095Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/payment/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"payment",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "-69573633",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"statusPayment\": \"<string>\",\n  \"datePayment\": \"<dateTime>\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/payment/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"payment",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "-69573633",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"paymentMethod\": \"<string>\",\n  \"totalPrice\": \"<float>\",\n  \"statusPayment\": \"<string>\",\n  \"datePayment\": \"<dateTime>\"\n}"
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://bluetriprm550841.eastus.azurecontainer.io:8080",
+			"type": "string"
+		}
+	]
+}
