@@ -4,13 +4,11 @@ Bluetrip é uma aplicação mobile de turismo focada em oceanos, rios e lagos. O
 
 ## 👥 Equipe
 
-Este projeto está sendo desenvolvido pelos seguintes membros:
+Este projeto foi desenvolvido pelos seguintes membros:
 
-- RM98110 - André Rohregger Machado (2TDSPV)
-- RM99565 - Erick Nathan Capito Pereira (2TDSPV)
-- RM550841 - Lucas Araujo Oliveira Silva (2TDSPW)
-- RM551886 - Victor Luca do Nascimento Queiroz (2TDSPV)
-- RM99455 - Vinícius Martins Torres Abdala (2TDSPV)
+- RM99565 - Erick Nathan Capito Pereira
+- RM550841 - Lucas Araujo Oliveira Silva
+- RM551569 - Marina de Souza Cucco
 
 ## 💻 Tecnologias
 
@@ -32,7 +30,7 @@ As principais tecnologias, bibliotecas, ecossistemas e frameworks incluídos no 
 ![Relational_1_page-0001](https://github.com/Lucas-Araujo15/bluetrip_api/assets/82396035/bc6150fc-612a-46f7-842d-c52b999af2cf)
 
 ## 🖌️ Vídeo Demonstração
-[![](https://img.youtube.com/vi/VlPLWYjzv_c/0.jpg)](https://youtu.be/VlPLWYjzv_c?si=7-stVhuEgJhBblHT)
+[![](https://img.youtube.com/vi/Fb7jmGYD3VU/0.jpg)](https://youtu.be/Fb7jmGYD3VU)
 
 ## 🖌️ Vídeo Pitch
 [![](https://img.youtube.com/vi/PFT-OPEi9ig/0.jpg)](https://youtu.be/PFT-OPEi9ig?si=uF5jv1HTekA8B9wc)
